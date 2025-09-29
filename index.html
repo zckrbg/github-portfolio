@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Fenerbahçe Temalı Özel Doğum Günü Kutlaması">
+    <title>🎉 Doğum Günün Kutlu Olsun! 💛💙</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Arka plan elementleri -->
+    <div class="bg-animation">
+        <div class="balloon balloon1"></div>
+        <div class="balloon balloon2"></div>
+        <div class="balloon balloon3"></div>
+        <div class="fb-logo fb-logo1">💛💙</div>
+        <div class="fb-logo fb-logo2">⭐⭐⭐</div>
+    </div>
+
+    <!-- Başlangıç Ekranı -->
+    <div id="startScreen" class="screen active">
+        <h1 class="celebration-text">
+            <span class="fb-yellow">💛 FENERBAHÇE'Lİ </span>
+            <span class="fb-blue">SÜRPRİZİN HAZIR! 💙</span>
+        </h1>
+        <button id="startButton" class="btn-primary fb-themed">
+            <span class="btn-icon">🎁</span>
+            <span class="btn-text">Sürprizi Başlat</span>
+            <span class="btn-icon">⭐</span>
+        </button>
+    </div>
+
+    <!-- Pasta Ekranı -->
+    <div id="cakeScreen" class="screen">
+        <h2 class="celebration-text">
+            <span class="fb-yellow">💛 DOĞUM GÜNÜN </span>
+            <span class="fb-blue">KUTLU OLSUN! 💙</span>
+        </h2>
+        <div class="cake-container" id="cakeContainer">
+            <div class="modern-cake">
+                <!-- Pasta tabanı -->
+                <div class="cake-stand"></div>
+                
+                <!-- Alt kat -->
+                <div class="cake-tier tier-bottom">
+                    <div class="fb-stripe stripe1"></div>
+                    <div class="fb-stripe stripe2"></div>
+                    <div class="fb-stripe stripe3"></div>
+                    <div class="cake-decoration">
+                        <span class="fb-emblem">FB</span>
+                    </div>
+                </div>
+                
+                <!-- Orta kat -->
+                <div class="cake-tier tier-middle">
+                    <div class="cream-layer"></div>
+                    <div class="fb-stars">
+                        <span>⭐</span><span>⭐</span><span>⭐</span>
+                    </div>
+                </div>
+                
+                <!-- Üst kat -->
+                <div class="cake-tier tier-top">
+                    <div class="frosting-drip"></div>
+                    <div class="cake-text">1907</div>
+                </div>
+                
+                <!-- Mumlar -->
+                <div class="candles-holder">
+                    <div class="candle candle1">
+                        <div class="candle-body"></div>
+                        <div class="flame">
+                            <div class="flame-inner"></div>
+                        </div>
+                    </div>
+                    <div class="candle candle2">
+                        <div class="candle-body"></div>
+                        <div class="flame">
+                            <div class="flame-inner"></div>
+                        </div>
+                    </div>
+                    <div class="candle candle3">
+                        <div class="candle-body"></div>
+                        <div class="flame">
+                            <div class="flame-inner"></div>
+                        </div>
+                    </div>
+                    <div class="candle candle4">
+                        <div class="candle-body"></div>
+                        <div class="flame">
+                            <div class="flame-inner"></div>
+                        </div>
+                    </div>
+                    <div class="candle candle5">
+                        <div class="candle-body"></div>
+                        <div class="flame">
+                            <div class="flame-inner"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="instruction pulse-text">✨ Mumları söndürmek için pastaya dokun! ✨</p>
+    </div>
+
+    <!-- Zarf Ekranı -->
+    <div id="envelopeScreen" class="screen">
+        <h2 class="celebration-text">
+            <span class="gradient-text">💌 ÖZEL MESAJIN VAR! 💌</span>
+        </h2>
+        <div class="envelope-wrapper">
+            <div class="modern-envelope" id="envelope">
+                <!-- Zarf arka kısmı -->
+                <div class="envelope-back">
+                    <div class="envelope-pattern"></div>
+                </div>
+                
+                <!-- Zarf kapağı -->
+                <div class="envelope-flap">
+                    <div class="flap-decoration">
+                        <span class="seal">💛💙</span>
+                    </div>
+                </div>
+                
+                <!-- Zarf ön kısmı -->
+                <div class="envelope-front">
+                    <div class="address-lines">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="stamp">
+                        <span>FB</span>
+                        <span class="year">1907</span>
+                    </div>
+                </div>
+                
+                <!-- Mektup (zarf içinde) -->
+                <div class="letter-inside">
+                    <div class="letter-paper">
+                        <h3>💛💙 Özel Mesaj 💛💙</h3>
+                        <p>Sevgili Fenerbahçeli...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="instruction shimmer">💝 Zarfı açmak için dokun! 💝</p>
+    </div>
+
+    <!-- Mektup Ekranı -->
+    <div id="letterScreen" class="screen">
+        <div class="modern-letter">
+            <div class="letter-header">
+                <div class="fb-badge">
+                    <span class="badge-star">⭐</span>
+                    <span class="badge-text">FB</span>
+                    <span class="badge-star">⭐</span>
+                </div>
+            </div>
+            
+            <div class="letter-body">
+                <h1 class="letter-title">
+                    <span class="fb-yellow">💛 DOĞUM GÜNÜN</span>
+                    <span class="fb-blue">KUTLU OLSUN! 💙</span>
+                </h1>
+                
+               <div class="letter-content">
+                    <p class="greeting">Sevgili Gizem,</p>
+                    <p>🎉 <strong>İyi ki doğdun, iyi ki varsın!</strong> 🎂</p>
+                    <p>Yeni yaşın, güzelliğin gibi hep ışıl ışıl ve mutlu geçsin. 🌸</p>
+                    <p>Senin gibi bir arkadaşım olduğu için kendimi gerçekten çok şanslı hissediyorum. 🤍</p>
+                    <p>Nice mutlu, kahkahalarla dolu yıllara! 🥳✨</p>
+                    <p class="letter-signature">
+                        <span class="signature-heart">💛💙</span>
+                        <span>Seni Çok Seviyorum!</span>
+                        <span class="signature-heart">💛💙</span>
+                    </p>
+                </div>
+                
+                <div class="letter-footer">
+                    <span class="footer-decoration">⭐ 1907 ⭐</span>
+                </div>
+            </div>
+            
+            <div class="decorative-border"></div>
+        </div>
+    </div>
+
+    <!-- Süs efektleri için container -->
+    <div id="effectsContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

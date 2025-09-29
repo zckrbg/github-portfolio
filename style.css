@@ -1,0 +1,949 @@
+/* Reset ve Fenerbahçe Renkleri */
+:root {
+    --fb-yellow: #FFD900;
+    --fb-blue: #00529F;
+    --fb-dark-blue: #003366;
+    --fb-light-yellow: #FFF59D;
+    --white: #FFFFFF;
+    --gold: #FFD700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, var(--fb-blue) 0%, var(--fb-dark-blue) 50%, var(--fb-blue) 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Fenerbahçe Tema Sınıfları */
+.fb-yellow {
+    color: var(--fb-yellow);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.fb-blue {
+    color: var(--fb-light-yellow);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Arka Plan Animasyonları */
+.bg-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.fb-logo {
+    position: absolute;
+    font-size: 30px;
+    opacity: 0.1;
+    animation: float-rotate 20s infinite linear;
+}
+
+.fb-logo1 {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.fb-logo2 {
+    bottom: 10%;
+    right: 10%;
+    animation-delay: 10s;
+}
+
+/* Ekran Yönetimi */
+.screen {
+    display: none;
+    animation: fadeIn 1s ease;
+    z-index: 10;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+/* Başlangıç Ekranı */
+.btn-primary.fb-themed {
+    padding: 15px 40px;
+    font-size: 20px;
+    background: linear-gradient(45deg, var(--fb-yellow), var(--gold));
+    color: var(--fb-blue);
+    font-weight: bold;
+    border: 3px solid var(--fb-blue);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-primary.fb-themed:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 15px 40px rgba(255,217,0,0.5);
+}
+
+/* Modern Fenerbahçe Pasta */
+.modern-cake {
+    position: relative;
+    width: 320px;
+    height: 350px;
+    margin: 30px auto;
+    transform-style: preserve-3d;
+    animation: cake-rotate 20s infinite linear;
+}
+
+.cake-stand {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    height: 40px;
+    background: linear-gradient(to bottom, #C0C0C0, #808080);
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.cake-tier {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    overflow: hidden;
+}
+
+.tier-bottom {
+    width: 300px;
+    height: 100px;
+    bottom: 20px;
+    background: linear-gradient(135deg, var(--fb-yellow), var(--gold));
+}
+
+.tier-middle {
+    width: 250px;
+    height: 80px;
+    bottom: 120px;
+    background: linear-gradient(135deg, var(--fb-blue), var(--fb-dark-blue));
+}
+
+.tier-top {
+    width: 200px;
+    height: 70px;
+    bottom: 200px;
+    background: linear-gradient(135deg, var(--white), #F0F0F0);
+}
+
+/* Fenerbahçe Çizgileri */
+.fb-stripe {
+    position: absolute;
+    width: 100%;
+    height: 33.33%;
+}
+
+.stripe1 {
+    top: 0;
+    background: var(--fb-yellow);
+}
+
+.stripe2 {
+    top: 33.33%;
+    background: var(--fb-blue);
+}
+
+.stripe3 {
+    top: 66.66%;
+    background: var(--fb-yellow);
+}
+
+.fb-emblem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.fb-stars {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.cake-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--fb-blue);
+}
+
+.cream-layer {
+    position: absolute;
+    top: -10px;
+    width: 100%;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+}
+
+.frosting-drip {
+    position: absolute;
+    top: -5px;
+    width: 100%;
+    height: 15px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.9), transparent);
+    border-radius: 50%;
+}
+
+/* Modern Mumlar */
+.candles-holder {
+    position: absolute;
+    bottom: 270px;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.candle {
+    position: relative;
+}
+
+.candle-body {
+    width: 15px;
+    height: 40px;
+    background: linear-gradient(to bottom, #FFF, #FFE4B5);
+    border-radius: 3px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.flame {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 30px;
+    background: radial-gradient(circle, #FFD700, #FF6B35, #FF4500);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    animation: flame-dance 0.5s infinite alternate;
+    filter: blur(1px);
+    transition: all 0.5s ease;
+}
+
+.flame-inner {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 15px;
+    background: radial-gradient(circle, #FFF, #FFD700);
+    border-radius: 50%;
+    animation: flame-flicker 0.3s infinite alternate;
+}
+
+.flame.out {
+    opacity: 0;
+    transform: translateX(-50%) scale(0);
+}
+
+/* Modern Zarf */
+.modern-envelope {
+    width: 320px;
+    height: 220px;
+    position: relative;
+    cursor: pointer;
+    margin: 30px auto;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.modern-envelope:hover {
+    transform: translateY(-5px);
+}
+
+.envelope-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--fb-yellow), var(--gold));
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+
+.envelope-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FFF9E6, #FFFACD);
+    border-radius: 10px;
+    border: 3px solid var(--fb-blue);
+    z-index: 2;
+}
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(135deg, var(--fb-blue), var(--fb-dark-blue));
+    border-radius: 10px 10px 0 0;
+    transform-origin: top center;
+    transition: transform 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    z-index: 3;
+}
+
+.modern-envelope.opening .envelope-flap {
+    transform: rotateX(-180deg);
+}
+
+.flap-decoration {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.seal {
+    display: inline-block;
+    padding: 10px;
+    background: var(--gold);
+    border-radius: 50%;
+    font-size: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+.address-lines {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.line {
+    width: 150px;
+    height: 3px;
+    background: var(--fb-blue);
+    margin: 10px 0;
+    opacity: 0.3;
+}
+
+.stamp {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--fb-yellow), var(--gold));
+    border: 3px solid var(--fb-blue);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--fb-blue);
+}
+
+.stamp .year {
+    font-size: 10px;
+}
+
+.letter-inside {
+    position: absolute;
+    width: 90%;
+    height: 150px;
+    bottom: 10px;
+    left: 5%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease 0.4s;
+}
+
+.modern-envelope.opening .letter-inside {
+    opacity: 1;
+    transform: translateY(-80px);
+}
+
+.letter-paper {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* Modern Mektup */
+.modern-letter {
+    background: linear-gradient(to bottom, #FFF, #FFF9E6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.letter-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fb-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, var(--fb-yellow), var(--gold));
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.badge-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--fb-blue);
+}
+
+.badge-star {
+    font-size: 20px;
+    animation: star-spin 3s infinite linear;
+}
+
+.letter-title {
+    text-align: center;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.letter-content {
+    color: #333;
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+.greeting {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--fb-blue);
+    margin-bottom: 15px;
+}
+
+.letter-signature {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 30px;
+    text-align: center;
+    color: var(--fb-blue);
+}
+
+.signature-heart {
+    font-size: 28px;
+    vertical-align: middle;
+    animation: heartbeat 1s infinite;
+}
+
+.letter-footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-decoration {
+    display: inline-block;
+    padding: 5px 15px;
+    background: linear-gradient(45deg, var(--fb-yellow), var(--gold));
+    color: var(--fb-blue);
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* Süs Efektleri */
+.mega-confetti {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    animation: mega-fall 4s linear forwards;
+}
+
+.firework {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.sparkle {
+    position: fixed;
+    color: var(--gold);
+    pointer-events: none;
+    z-index: 9999;
+    animation: sparkle-burst 2s ease-out forwards;
+}
+
+.fb-emblem-float {
+    position: fixed;
+    font-size: 40px;
+    font-weight: bold;
+    pointer-events: none;
+    z-index: 9999;
+    animation: emblem-float 5s ease-out forwards;
+}
+
+/* Özel Animasyonlar */
+@keyframes flame-dance {
+    0% { transform: translateX(-50%) scale(1) rotate(-2deg); }
+    100% { transform: translateX(-50%) scale(1.1) rotate(2deg); }
+}
+
+@keyframes flame-flicker {
+    0% { opacity: 0.8; transform: translateX(-50%) scale(0.9); }
+    100% { opacity: 1; transform: translateX(-50%) scale(1.1); }
+}
+
+@keyframes cake-rotate {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+}
+
+@keyframes float-rotate {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(100px, -100px) rotate(90deg); }
+    50% { transform: translate(-100px, -200px) rotate(180deg); }
+    75% { transform: translate(-200px, 100px) rotate(270deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+@keyframes star-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes mega-fall {
+    0% {
+        transform: translateY(-100vh) rotate(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(720deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes sparkle-burst {
+    0% {
+        transform: translate(0, 0) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--spread-x), var(--spread-y)) scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes emblem-float {
+    0% {
+        transform: translate(0, 100vh) scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(0, -50px) scale(1.5) rotate(180deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, -100vh) scale(0.5) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@keyframes firework-burst {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--burst-x), var(--burst-y)) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Genel Animasyonlar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+/* Metin Efektleri */
+.celebration-text {
+    font-size: 28px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--fb-yellow), var(--gold), var(--fb-yellow));
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.pulse-text {
+    animation: pulse-glow 2s infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { 
+        opacity: 0.8;
+        text-shadow: 0 0 10px rgba(255,217,0,0.5);
+    }
+    50% { 
+        opacity: 1;
+        text-shadow: 0 0 20px rgba(255,217,0,0.8);
+    }
+}
+
+.shimmer {
+    background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.7) 50%, transparent 60%);
+    background-size: 200% 100%;
+    background-position: -100% 0;
+    animation: shimmer 2s infinite;
+    -webkit-background-clip: text;
+}
+
+@keyframes shimmer {
+    100% { background-position: 100% 0; }
+}
+
+.instruction {
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+    margin-top: 25px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Balon Animasyonları */
+.balloon {
+    position: absolute;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    opacity: 0.6;
+    animation: balloon-float 8s infinite ease-in-out;
+}
+
+.balloon1 {
+    width: 80px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--fb-yellow), var(--gold));
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.balloon2 {
+    width: 70px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--fb-blue), var(--fb-dark-blue));
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.balloon3 {
+    width: 90px;
+    height: 110px;
+    background: linear-gradient(135deg, var(--white), #F0F0F0);
+    right: 15%;
+    bottom: 10%;
+    animation-delay: 4s;
+}
+
+@keyframes balloon-float {
+    0%, 100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+    33% {
+        transform: translateY(-50px) rotate(5deg);
+    }
+    66% {
+        transform: translateY(-30px) rotate(-3deg);
+    }
+}
+
+/* Mobil Uyumluluk */
+@media screen and (max-width: 768px) {
+    .celebration-text {
+        font-size: 24px;
+    }
+    
+    .modern-cake {
+        width: 280px;
+        height: 320px;
+        animation: none;
+    }
+    
+    .tier-bottom {
+        width: 260px;
+        height: 90px;
+    }
+    
+    .tier-middle {
+        width: 220px;
+        height: 70px;
+        bottom: 110px;
+    }
+    
+    .tier-top {
+        width: 180px;
+        height: 60px;
+        bottom: 180px;
+    }
+    
+    .candles-holder {
+        bottom: 240px;
+        width: 180px;
+    }
+    
+    .modern-envelope {
+        width: 280px;
+        height: 190px;
+    }
+    
+    .modern-letter {
+        padding: 25px;
+    }
+    
+    .letter-content {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .screen {
+        padding: 15px;
+    }
+    
+    .celebration-text {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .btn-primary.fb-themed {
+        padding: 12px 30px;
+        font-size: 18px;
+    }
+    
+    .modern-cake {
+        width: 240px;
+        height: 280px;
+    }
+    
+    .cake-stand {
+        width: 280px;
+        height: 30px;
+    }
+    
+    .tier-bottom {
+        width: 220px;
+        height: 80px;
+    }
+    
+    .tier-middle {
+        width: 180px;
+        height: 60px;
+        bottom: 100px;
+    }
+    
+    .tier-top {
+        width: 150px;
+        height: 50px;
+        bottom: 160px;
+    }
+    
+    .candles-holder {
+        bottom: 210px;
+        width: 150px;
+    }
+    
+    .candle-body {
+        width: 12px;
+        height: 30px;
+    }
+    
+    .flame {
+        width: 20px;
+        height: 25px;
+        top: -20px;
+    }
+    
+    .fb-emblem {
+        font-size: 30px;
+    }
+    
+    .cake-text {
+        font-size: 20px;
+    }
+    
+    .modern-envelope {
+        width: 240px;
+        height: 160px;
+    }
+    
+    .stamp {
+        width: 50px;
+        height: 50px;
+        font-size: 14px;
+    }
+    
+    .modern-letter {
+        padding: 20px;
+    }
+    
+    .letter-title {
+        font-size: 22px;
+    }
+    
+    .letter-content {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    .letter-content p {
+        margin: 8px 0;
+    }
+    
+    .letter-signature {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    
+    .instruction {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    
+    .balloon {
+        display: none;
+    }
+    
+    .fb-logo {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .celebration-text {
+        font-size: 18px;
+    }
+    
+    .modern-cake {
+        width: 200px;
+        height: 250px;
+    }
+    
+    .tier-bottom {
+        width: 180px;
+        height: 70px;
+    }
+    
+    .tier-middle {
+        width: 150px;
+        height: 55px;
+        bottom: 90px;
+    }
+    
+    .tier-top {
+        width: 120px;
+        height: 45px;
+        bottom: 145px;
+    }
+    
+    .candles-holder {
+        bottom: 190px;
+        width: 120px;
+    }
+    
+    .modern-envelope {
+        width: 200px;
+        height: 140px;
+    }
+}
+
+/* Landscape Modu */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    body {
+        padding: 5px;
+    }
+    
+    .celebration-text {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .modern-cake {
+        width: 200px;
+        height: 220px;
+    }
+    
+    .instruction {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+}
